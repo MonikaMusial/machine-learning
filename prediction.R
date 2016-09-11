@@ -102,6 +102,8 @@ results <- resamples(list(logistic=fit.glm, knn=fit.knn,
 # Table comparison
 summary(results)
 
+#kNN gave me the best results.
+
 #transform test into PCA
 test.data <- predict(prin_comp, newdata = pca.test)
 test.data <- as.data.frame(test.data)
